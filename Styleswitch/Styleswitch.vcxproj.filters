@@ -30,9 +30,6 @@
     <ClCompile Include="bytestuff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inistuff.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Virtualallocate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -59,13 +56,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inistuff.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="constants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Virtualallocate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

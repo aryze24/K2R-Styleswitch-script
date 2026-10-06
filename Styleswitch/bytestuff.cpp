@@ -4,11 +4,8 @@
 #include "mempatch.h"
 #include <string>
 #include <sstream>
-#include <shlwapi.h>
-#include "inistuff.h"
 #include "Hook/MinHook.h"
 
-#pragma comment(lib, "Shlwapi.lib")
 #pragma comment(lib, "resources/libMinHook.x64.lib")
 
 
@@ -54,23 +51,5 @@ void DisableRestriction()
     {
         BYTE nopPatch[] = { 0x83, 0xB8, 0x68, 0x01, 0x00, 0x00, 0x04 };
         Patch(atk_outside, nopPatch, sizeof(nopPatch));
-    }
-    if (!Initializeini()) {
-        return;
-    }
-
-    while (true) {
-        if (StyleProperties == 1) {
-            BYTE* styleproperty = PatternScan(GetModuleHandle(NULL), "8B 91 68 01 00 00 83 EA");
-            if (styleproperty)
-            {
-                BYTE nopPatch[] = { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 };
-                Patch(styleproperty, nopPatch, sizeof(nopPatch));
-            }
-            if (!Initializeini()) {
-                return;
-            }
-        }
-        Sleep(200);
     }
 }

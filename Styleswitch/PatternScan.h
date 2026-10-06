@@ -53,6 +53,14 @@ inline std::uint8_t* PatternScan(void* module, const char* signature)
             return &scanBytes[i];
         }
     }
+    char buf[1040];
+    snprintf(buf, 1040, "couldnt find %s signature, expect errors or crashes", signature);
+    MessageBoxA(
+        nullptr,
+        buf,
+        "CANT FIND PATTERN",
+        MB_OK | MB_ICONERROR
+    );
     return nullptr;
 }
 

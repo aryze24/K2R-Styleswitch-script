@@ -125,7 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,9 +139,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bytestuff.cpp" />
-    <ClCompile Include="inistuff.cpp" />
     <ClCompile Include="Main.cpp">
-      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp20</LanguageStandard>
     </ClCompile>
     <ClCompile Include="mempatch.cpp" />
     <ClCompile Include="patternscan.cpp" />
@@ -150,10 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bytestuff.h" />
-    <ClInclude Include="constants.h" />
+    <ClInclude Include="db.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Hook\MinHook.h" />
-    <ClInclude Include="inistuff.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="mempatch.h" />
     <ClInclude Include="PatternScan.h" />
